@@ -310,9 +310,7 @@ int main()
 
     fseek(license, 0, SEEK_SET);
     while (fgets(name, 1000, license) != NULL) // On lit le fichier tant qu'on ne reçoit pas d'erreur (NULL)
-        {
             printf("%s", name); // On affiche la chaîne qu'on vient de lire
-        }
 
     printf("\n\nLicense.txt successfully generated.\n");
     printf("The program will now exit.");
