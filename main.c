@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <wchar.h>
 
 int main()
 {
@@ -9,8 +8,10 @@ int main()
     int menu=0, date=0, choice=0;
     char name[1000];
     if (license == NULL)
+    {
         printf("Cannot open License.txt");
-
+        return 0;
+    }
     printf("\n            License Generator         \n");
     printf("\n ================= MENU ================\n");
     printf(" | 1) GNU Affero General Public License|\n");
@@ -354,8 +355,8 @@ int main()
                 } while ((choice<1) || (choice>2));
                 if (choice==1)
                 {
-                    fprintf(license, "\nThis Source Code Form is “Incompatible\n");
-                    fprintf(license, "With Secondary Licenses”, as defined by\n");
+                    fprintf(license, "\nThis Source Code Form is ï¿½Incompatible\n");
+                    fprintf(license, "With Secondary Licensesï¿½, as defined by\n");
                     fprintf(license, "the Mozilla Public License, v. 2.0.");
                 }
 
